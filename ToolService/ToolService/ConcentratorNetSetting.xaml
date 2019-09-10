@@ -1,0 +1,23 @@
+﻿<Window x:Class="ToolService.ConcentratorNetSetting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="配置集中器网络" Height="300" Width="300">
+    <Grid>
+        <Label Content="集中器地址：" HorizontalAlignment="Left" Margin="34,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="集中器IP：" HorizontalAlignment="Left" Margin="34,50,0,0" VerticalAlignment="Top"/>
+        <Label Content="集中器端口：" HorizontalAlignment="Left" Margin="34,80,0,0" VerticalAlignment="Top"/>
+        <Label Content="集中器子网掩码：" HorizontalAlignment="Left" Margin="34,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="远程主机IP：" HorizontalAlignment="Left" Margin="34,140,0,0" VerticalAlignment="Top"/>
+        <Label Content="远程主机端口：" HorizontalAlignment="Left" Margin="34,170,0,0" VerticalAlignment="Top"/>
+        <Label Content="网关IP：" HorizontalAlignment="Left" Margin="34,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox x:Name="concentratorText" HorizontalAlignment="Left" Height="23" Margin="146,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="concentratorIPText" HorizontalAlignment="Left" Height="23" Margin="146,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="concentratorPortText" HorizontalAlignment="Left" Height="23" Margin="146,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="localHostSubnetMsakText" Text="255.255.255.0" HorizontalAlignment="Left" Height="23" Margin="146,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="remoteHostIPText" HorizontalAlignment="Left" Height="23" Margin="146,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="remoteHostPortText" HorizontalAlignment="Left" Height="23" Margin="146,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="gatewayIPText" Text="192.168.101.1" HorizontalAlignment="Left" Height="23" Margin="146,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="excuteBtn" Content="执行" HorizontalAlignment="Left" Margin="52,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.005,0.062" Click="excuteBtn_Click"/>
+        <Button x:Name="cancelBtn" Content="取消" HorizontalAlignment="Left" Margin="177,239,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.005,0.062" Click="cancelBtn_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="ToolService.FindStrap"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolService"
+        mc:Ignorable="d"
+        Title="FindStrap" Height="600" Width="525">
+    <Grid Margin="0,0,-66,-75">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="164*"/>
+            <RowDefinition Height="33*"/>
+        </Grid.RowDefinitions>
+        <Label Content="逻辑地址：" HorizontalAlignment="Left" Margin="76,28,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="23" Margin="151,32,0,0" TextWrapping="Wrap" Text="请输入" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="bt1" Content="查询" HorizontalAlignment="Left" Margin="338,34,0,0" VerticalAlignment="Top" Width="75" Click="bt1_Click"/>
+        <DataGrid x:Name="dg" HorizontalAlignment="Left" Margin="37,75,0,0" VerticalAlignment="Top" Height="346" Width="440" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Width="100" FontSize="15" Header="表带地址" Binding="{Binding strapaddress}"/>
+
+                <DataGridTextColumn Width="80" Header="表带类型" FontSize="15"  Binding="{Binding straptype}"/>
+
+                <DataGridTextColumn x:Name="data" Width="80" FontSize="15" Header="检测数据" Binding="{Binding temperture}"/>
+
+                <DataGridTextColumn Width="180" Header="电压" FontSize="15"  Binding="{Binding voltage}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="总记录数：" HorizontalAlignment="Left" Margin="37,457,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtNum" HorizontalAlignment="Left" Height="23" Margin="117,461,0,0" TextWrapping="Wrap" Text="NULL" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
